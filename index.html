@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário do Paciente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #007bff;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea,
+        input[type="file"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Define a altura para as áreas de texto */
+        textarea {
+            height: 100px; /* Defina a altura desejada aqui */
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form
+  action="https://formspree.io/f/xzblywqb"
+  method="POST"
+>
+    <h1>Formulário do Paciente</h1>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <label for="nome">Nome do Paciente:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento" required><br>
+
+        <label for="prontuario">Número do Prontuário:</label>
+        <input type="text" id="prontuario" name="prontuario" required><br>
+
+        <label for="numero_exame">Número do Exame:</label>
+        <input type="text" id="numero_exame" name="numero_exame" required><br>
+
+        <label for="sintomas">Sintomas:</label>
+        <textarea id="sintomas" name="sintomas" rows="4" cols="50" required></textarea><br>
+
+        <label for="medicamentos">Medicamentos:</label>
+        <textarea id="medicamentos" name="medicamentos" rows="4" cols="50" required></textarea><br>
+
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea><br>
+
+        <label for="documento_anexo">Anexar Documento:</label>
+        <input type="file" id="documento_anexo" name="documento_anexo"><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
